@@ -1,36 +1,44 @@
-# stub-repo &middot; [![Test workflow status](https://github.com/ChrisCodesThings/stub-repo/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/stub-repo)](https://www.npmjs.com/package/@chriscodesthings/stub-repo) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+# compress-css-hex-color &middot; [![Test workflow status](https://github.com/ChrisCodesThings/compress-css-hex-color/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/compress-css-hex-color)](https://www.npmjs.com/package/@chriscodesthings/compress-css-hex-color) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-> **Function to determine if something is a string type**
+> **Convert a CSS hex color code to short form if possible**
 
 ## Install
 
 ```sh
-npm install --save @chriscodesthings/stub-repo
+npm install --save @chriscodesthings/compress-css-hex-color
 ```
 
 ## Use
 
 ```js
-import stubRepo from '@chriscodesthings/stub-repo';
+import compressCSSColor from '@chriscodesthings/compress-css-hex-color';
 
-console.log(stubRepo("hello world!"));
-// => true
+console.log(compressCSSColor("#ff0000dd"));
+// => #f00d
 ```
 
 ## Syntax
 
 ```js
-stubRepo(var);
+compressCSSColor(col);
 ```
 
 ### Parameters
 
-- *var*: any
+- *col*: a CSS hex color string
 
 ### Return Value
 
-Returns something probably.
+Returns the short form of the CSS color code.
 
 ## Description
 
-Does what it says on the tin.
+Compresses a CSS hex color code. If the string passed is already a short form color code, the color is returned unmodified. If a long form color code is passed and can be shortened, the short form of the color is returned.
+
+Example hex color codes:
+```
+#000      // black short form
+#000000   // black long form
+#663399   // rebeccapurple
+#66449988 // ... with 53% transparency
+#6498     // ... in short form
