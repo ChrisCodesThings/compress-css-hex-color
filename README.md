@@ -20,12 +20,12 @@ console.log(compressCSSColor("#ff0000dd"));
 ## Syntax
 
 ```js
-compressCSSColor(col);
+compressCSSColor(color);
 ```
 
 ### Parameters
 
-- *col*: a CSS hex color string
+- *color*: a CSS hex color string
 
 ### Return Value
 
@@ -33,7 +33,13 @@ Returns the short form of the CSS color code.
 
 ## Description
 
-Compresses a CSS hex color code. If the string passed is already a short form color code, the color is returned unmodified. If a long form color code is passed and can be shortened, the short form of the color is returned.
+Compresses a CSS hex color code. 
+
+If the string passed is already a short form color code or it is a long form color code that cannot be shortened, the color is returned unmodified. 
+
+If a long form color code is passed and can be shortened, the short form of the color is returned.
+
+If the alpha value is F or FF then it is removed.
 
 Example hex color codes:
 ```
