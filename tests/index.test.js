@@ -32,7 +32,7 @@ describe("compress some colours", () => {
         expect(testFunc("#f00d")).toEqual("#f00d");
     });
 
-    test("should compress with alpha removed", async () => {
+    test("should remove alpha", async () => {
         expect(testFunc("#f00f")).toEqual("#f00");
     });
 
@@ -42,5 +42,9 @@ describe("compress some colours", () => {
 
     test("should compress with alpha removed", async () => {
         expect(testFunc("#aabbccff")).toEqual("#abc");
+    });
+
+    test("should remove alpha", async () => {
+        expect(testFunc("#6495edff")).toEqual("#6495ed");
     });
 });

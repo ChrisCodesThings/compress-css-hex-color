@@ -30,11 +30,11 @@ export default function (col) {
         return;
     }
 
+    col = removeAlphaFF(col);
+
     if (!canBeCompressed(col)) {
         return col;
     }
-
-    col = removeAlphaFF(col);
 
     if (col.length == 4) {
         return col;
