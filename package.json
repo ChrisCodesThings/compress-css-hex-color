@@ -1,6 +1,6 @@
 {
   "name": "@chriscodesthings/compress-css-hex-color",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert a CSS hex color code to short form if possible",
   "keywords": [
     "css",
