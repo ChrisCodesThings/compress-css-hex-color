@@ -1,35 +1,6 @@
 # compress-css-hex-color &middot; [![Test workflow status](https://github.com/ChrisCodesThings/compress-css-hex-color/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/compress-css-hex-color)](https://www.npmjs.com/package/@chriscodesthings/compress-css-hex-color) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-> **Convert a CSS hex color code to short form if possible**
-
-## Install
-
-```sh
-npm install --save @chriscodesthings/compress-css-hex-color
-```
-
-## Use
-
-```js
-import compressCSSColor from '@chriscodesthings/compress-css-hex-color';
-
-console.log(compressCSSColor("#ff0000dd"));
-// => #f00d
-```
-
-## Syntax
-
-```js
-compressCSSColor(color);
-```
-
-### Parameters
-
-- *color*: a CSS hex color string
-
-### Return Value
-
-Returns the short form of the CSS color code.
+> **Convert a CSS hex color code to short form**
 
 ## Description
 
@@ -48,3 +19,48 @@ Example hex color codes:
 #663399   // rebeccapurple
 #66449988 // ... with 53% transparency
 #6498     // ... in short form
+```
+
+### See...
+- [Install/Usage](#install "Install and Usage")
+- [Syntax](#syntax "Syntax")
+- [Examples](#examples "Examples")
+- [See Also](#see-also "See Also")
+
+---
+
+## Install
+
+```sh
+npm install --save @chriscodesthings/compress-css-hex-color
+```
+
+## Use
+
+```js
+import compressCSSHexColor from '@chriscodesthings/compress-css-hex-color';
+
+console.log(compressCSSHexColor("#ff0000dd"));
+// => #f00d
+```
+
+## Syntax
+
+```js
+compressCSSHexColor(color);
+```
+
+### Parameters
+
+- *color*: a CSS hex color string
+
+### Return Value
+
+Returns the short form of the CSS color code, or the original string if it can't be compressed.
+
+## See Also...
+
+- [**is-css-hex-color**: Determine if a string is a hex color code](https://github.com/ChrisCodesThings/is-css-hex-color "Determine if a string is a hex color code")
+- [**random-css-hex-color**: Generates a random color in CSS hex format](https://github.com/ChrisCodesThings/random-css-hex-color "Generates a random color in CSS hex format")
+- [**rgba-color-to-css-hex**: Converts an RGB or RGBA color to a CSS hex color code](https://github.com/ChrisCodesThings/rgba-color-to-css-hex "Converts an RGB or RGBA color to a CSS hex color code")
+- [**color-object**: Simple, lightweight class to store and manipulate a color, and convert between formats](https://github.com/ChrisCodesThings/color-object "Simple, lightweight class to store and manipulate a color, and convert between formats")
