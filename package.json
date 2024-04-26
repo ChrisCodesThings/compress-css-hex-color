@@ -1,7 +1,7 @@
 {
   "name": "@chriscodesthings/compress-css-hex-color",
   "version": "1.0.1",
-  "description": "Convert a CSS hex color code to short form if possible",
+  "description": "Convert a CSS hex color code to short form",
   "keywords": [
     "css",
     "hex",
@@ -13,31 +13,33 @@
     "type": "git",
     "url": "git+https://github.com/ChrisCodesThings/compress-css-hex-color.git"
   },
-  "main": "index.js",
-  "type": "module",
-  "files": [
-    "/CHANGELOG.md",
-    "/index.js",
-    "/src",
-    "/dist"
-  ],
-  "engines": {
-    "node": ">=18.0.0"
-  },
   "bugs": {
     "url": "https://github.com/ChrisCodesThings/compress-css-hex-color/issues"
-  },
-  "scripts": {
-    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
-    "version": "auto-changelog -p && git add CHANGELOG.md",
-    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "@chriscodesthings/is-css-hex-color": "^1.0.1"
   },
   "devDependencies": {
     "auto-changelog": "^2.4.0",
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "typescript": "^5.4.5"
+  },
+  "main": "index.js",
+  "type": "module",
+  "files": [
+    "/CHANGELOG.md",
+    "/index.js",
+    "/index.d.ts",
+    "/src"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "gen-dts": "find . -type f -name '*.d.ts' -not -path './node_modules/*' -delete && tsc -d --emitDeclarationOnly --allowJs index.js",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest && npm run gen-dts",
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "postversion": "git push && git push --tags"
   },
   "publishConfig": {
     "access": "public"
@@ -45,7 +47,7 @@
   "author": {
     "name": "Chris Dabrowa",
     "email": "fanmail@chris.dabrowa.uk",
-    "url": "http://chris.dabrowa.uk/code"
+    "url": "http://chris.dabrowa.uk/code/js"
   },
   "contributors": [],
   "license": "MIT"
