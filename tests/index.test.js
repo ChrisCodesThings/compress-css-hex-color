@@ -14,6 +14,8 @@ describe("compress some colours", () => {
     });
 
     test("should compress", async () => {
+        expect(testFunc("#aabbcc")).toEqual("#abc");
+        expect(testFunc("#aabbccff")).toEqual("#abc");
         expect(testFunc("#aabbccdd")).toEqual("#abcd");
     });
 
