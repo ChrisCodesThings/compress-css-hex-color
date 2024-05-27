@@ -1,8 +1,10 @@
 // @ts-check
 
+import * as Types from "@chriscodesthings/basic-color-types";
+
 /**
  * Determine if a CSS hex colour code can be compressed
- * @param {string} col CSS hex colour code
+ * @param {Types.cssHexCode} col CSS hex colour code
  * @returns {boolean}
  */
 function canBeCompressed(col) {
@@ -14,8 +16,8 @@ function canBeCompressed(col) {
 
 /**
  * Removes unnecessary alpha F's from a CSS hex colour string
- * @param {string} col CSS hex colour string
- * @returns {string}
+ * @param {Types.cssHexCode} col CSS hex colour string
+ * @returns {Types.cssHexCode}
  */
 function removeAlphaFF(col) {
     if (col.length == 9 && col.match(/ff$/i)) {
@@ -31,8 +33,8 @@ function removeAlphaFF(col) {
 
 /**
  * Compresses a CSS hex colour code to short form, if possible
- * @param {string} col CSS hex colour code
- * @returns {string}
+ * @param {Types.cssHexCode} col CSS hex colour code
+ * @returns {Types.cssHexCode}
  */
 export default function compressCSSHexColor(col) {
     col = removeAlphaFF(col);

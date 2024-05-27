@@ -16,7 +16,9 @@
   "bugs": {
     "url": "https://github.com/ChrisCodesThings/compress-css-hex-color/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@chriscodesthings/basic-color-types": "^1.0.1"
+  },
   "devDependencies": {
     "auto-changelog": "^2.4.0",
     "jest": "^29.7.0",

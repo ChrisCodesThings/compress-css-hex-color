@@ -23,6 +23,7 @@ Example hex color codes:
 
 ### See...
 - [Install/Usage](#install "Install and Usage")
+- [Types](#types "Types")
 - [Syntax](#syntax "Syntax")
 - [Examples](#examples "Examples")
 - [See Also](#see-also "See Also")
@@ -43,6 +44,11 @@ import compressCSSHexColor from '@chriscodesthings/compress-css-hex-color';
 console.log(compressCSSHexColor("#ff0000dd"));
 // => #f00d
 ```
+
+## Types
+
+This package uses types from:
+- [**basic-color-types**: Defines named types for common color formats](https://github.com/ChrisCodesThings/basic-color-types "Defines named types for common color formats")
 
 ## Syntax
 

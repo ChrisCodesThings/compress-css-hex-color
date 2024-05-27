@@ -1,2 +1,3 @@
-export { default } from "./src/compressCSSHexColor.js";
+// @ts-check
 
+export { default } from "./src/compressCSSHexColor.js";
